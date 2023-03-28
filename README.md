@@ -1,3 +1,5 @@
 # Lamutarba
 
-(https://dev.laacz.lv/lamutarba/)
+Pull requests welcome.
+
+https://dev.laacz.lv/lamutarba/
