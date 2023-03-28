@@ -269,7 +269,7 @@
         ];
 
         function isGender(word, female) {
-            const male = word.endsWith('s');
+            const male = word.endsWith('s') || word.endsWith('š');
             return (female && !male) || (!female && male);
         }
 
