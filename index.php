@@ -45,6 +45,7 @@ $tarba = [
             'riebīgais',
             'nabadzīgais',
             'čaganais',
+	    'apjātais',
         ],
         [
         	'pagraba',
@@ -58,7 +59,9 @@ $tarba = [
         	'dunduru',
         	'lutaušu',
         	'papeļu',
-            'šņabja',
+            	'šņabja',
+		'šķūņpakaļas',
+		'aizmeža',
         ],
         [
         	'žūpa',
@@ -73,6 +76,10 @@ $tarba = [
         	'ūksts',
         	'pīters',
         	'šļurbaks',
+		'pimpausis',
+		'dirskrādziņš',
+		'maukumēbele',
+		'diršļaks',
         ]
     ],
     'she' => [
@@ -89,6 +96,7 @@ $tarba = [
     		'viltīgā',
     		'bezkaunīgā',
     		'dusmīgā',
+		'nošņurkusī',
     	],
     	[
     		'kaimiņu',
@@ -103,6 +111,7 @@ $tarba = [
     		'krūmu',
     		'vircas',
     		'baznīcas',
+		'nabagmājas',
     	],
     	[
     		'kārkaļa',
@@ -117,6 +126,8 @@ $tarba = [
     		'ķēkša',
     		'kļocka',
     		'bezde',
+		'pežuveste',
+		'diršļa',
     	]
     ]
 ];
