@@ -32,7 +32,7 @@
     <div id="container">
         <p><a href="" id="click-me">Spied te, lai būtu jauna kombinācija</a></p>
 
-        <h1>Viņa/viņš ir <em><span class="select-me"></span></em></h1>
+        <h1><span id="gender-me"></span> ir <em><span id="select-me"></span></em></h1>
 
         <p>Ideja un saturs no <a
                 href="https://pilsonis.wordpress .com/2017/01/18/aizvainosanas-tabulas-jeb-lamutarbas/">Pilsoņa</a>.
@@ -59,7 +59,7 @@
             }
         }
 
-        const els = document.querySelectorAll('.select-me');
+        const els = document.querySelectorAll('#select-me');
         for (let i = 0; i < els.length; i++) {
             els[i].addEventListener('click', function (evt) {
                 selectText(evt.currentTarget);
@@ -268,9 +268,24 @@
             ],
         ];
 
+        function isGender(word, female) {
+            const male = word.endsWith('s');
+            return (female && !male) || (!female && male);
+        }
+
         function make() {
-            document.querySelector('.select-me').innerText =
-                words.map((arr) => arr[Math.floor(Math.random() * arr.length)]).join(' ');
+            const ret = [];
+
+            ret.push(words[0][Math.floor(Math.random() * words[0].length)]);
+            ret.push(words[1][Math.floor(Math.random() * words[1].length)]);
+
+            const female = ret[0].endsWith('ī') || ret[0].endsWith('ā');
+            const filteredWords = words[2].filter(word => isGender(word, female));
+
+            ret.push(filteredWords[Math.floor(Math.random() * filteredWords.length)]);
+
+            document.querySelector('#select-me').innerText = ret.join(' ');
+            document.querySelector('#gender-me').innerText = female ? 'Viņa' : 'Viņš';
         }
 
         document.addEventListener('DOMContentLoaded', function () {
