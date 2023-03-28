@@ -1,3 +1,3 @@
 # Lamutarba
 
-[https://dev.laacz.lv/lamutarba/]
+(https://dev.laacz.lv/lamutarba/)
